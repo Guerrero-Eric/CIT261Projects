@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="weekTwo.css">
+    <script src="weekTwo.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+    </header>
+    <h2>Loops</h2>
+    <p>Looping in programming languages is a feature which facilitates the execution of a set of instructions/functions repeatedly while some condition evaluates to true.</p>
+    <p>var i; <br> 
+            for (i = 0; i < 10; i++) <br>  
+            { <br>
+                document.write("Hello World!\n"); <br> 
+            } <br>
+    </p>
+    <script type="text/javascript">
+        myloop();
+    </script>
+    <h2>Conditional Statements</h2>
+    <p>Conditional statements are used to perform different actions based on different conditions.</p>
+    <p>In JavaScript we have the following conditional statements:</p>
+    <ul class=square>
+        <li>Use <a class=related href="#if">if</a> to specify a block of code to be executed, if a specified condition is true </li> 
+        <li>Use <a class=related href="#else">else</a> to specify a block of code to be executed, if the same condition is false </li> 
+        <li>Use <a class=related href="#elseif">else if</a> to specify a new condition to test, if the first condition is false</li>
+        <li>Use <a class=related href="#switch">switch</a> to specify many alternative blocks of code to be executed</li>
+    </ul>
+    <h2> The if Statement</h2>
+    <p>Use the if statement to specify a block of JavaScript code to be executed if a condition is true.</p>
+    <p>if (hour < 18) { <br> greeting = "Good day";<br>  }</p>
+    <h2> The else Statement</h2>
+    <p>Use the else statement to specify a block of code to be executed if the condition is false.</p>
+    <p>if (hour < 18) {<br>greeting = "Good day";<br>} else {<br>greeting = "Good evening";<br>}</p>
+    <h2> The else if Statement</h2>
+    <p>Use the else if statement to specify a new condition if the first condition is false.</p>
+    <p>if (time < 10) {<br>greeting = "Good morning";<br>  } else if (time < 20) {<br>    greeting = "Good day";<br>  } else {<br> greeting = "Good evening";<br>  }</p>
+    <h3>Result:</h3>
+    <script>
+        myifFunction();
+    </script>
+    <h2> The switch Statement</h2>
+    <p>The switch statement is used to perform different actions based on different conditions.</p>
+    <p>switch (new Date().getDay()) {<br> case 0: <br>  day = "Sunday"; <br>  break; <br> case 1: <br>  day = "Monday"; <br>  break; <br> case 2: <br>   day = "Tuesday"; <br>  break; <br> case 3: <br>  day = "Wednesday"; <br> break; <br>case 4: <br>  day = "Thursday"; <br>  break; <br>  case 5: <br>  day = "Friday"; <br>  break; <br> case 6: <br>day = "Saturday"; <br>}</p>
+    <h2>Functions</h2>
+    <p>Functions are the main “building blocks” of the program. They allow the code to be called many times without repetition.</p>
+    <h3>Function Declaration</h3>
+    <p>To create a function we can use a function declaration.<br>It looks like this:</p>
+    <p>
+        function showMessage() {<br>
+            alert( 'Hello everyone!' );<br>
+        }
+    </p>
+    <p>Our new function can be called by its name: showMessage().</p>
+    <p>
+        function showMessage() { <br>
+            alert( 'Hello everyone!' ); <br>
+          } <br>
+          <br>
+          showMessage(); <br>
+          showMessage(); 
+    </p>
+    <p>The call showMessage() executes the code of the function. Here we will see the message two times.<br>
+        This example clearly demonstrates one of the main purposes of functions: to avoid code duplication.
+    </p>
+    <h2>Variables</h2>
+    <p>Variables are named values and can store any type of JavaScript value. <br>
+            Here’s how to declare a variable:</p>
+    <p>var x = 100;</p>
+    <ul>
+        <li> And here’s what’s happening in the example above: </li>
+        <li> var is the keyword that tells JavaScript you’re declaring a variable. </li>
+        <li> x is the name of that variable. </li>
+        <li> = is the operator that tells JavaScript a value is coming up next. </li>
+        <li> 100 is the value for the variable to store. </li>
+    </ul>
+    <h2>Parameters</h2>
+    <p>Function parameters are the names listed in the function definition.</p>
+    <h3>Parameter Rules</h3>
+    <p>
+            JavaScript function definitions do not specify data types for parameters. <br>
+            JavaScript functions do not perform type checking on the passed arguments. <br>
+            JavaScript functions do not check the number of arguments received.
+    </p>
+    <h2>Arrays</h2>
+    <p>Arrays are a fundamental part of most programming languages and scripts. Arrays are simply an ordered stack of data items. Each element of the array can store its own data, just like a variable, thus you can say arrays are collections of variables. Items can be added and removed from the array at any time, also their value can be changed easily. One other feature of the arrays, which is specific to JavaScript is that the elements in the array can be of different types. For example in an array you can have both a string and an integer.</P>
+    <p>Using arrays, you can store multiple values under a single name. Instead of using a separate variable for each item, you can use one array to hold all of them. </P>
+    <ul class=square>
+        <li><a class=related href="#create">Creating Arrays</a> 
+        <li><a class=related href="#associative">Associative Arrays</a></li>
+        <li><a class=related href="#multidim">Multidimensional Arrays</a> </li>
+    </ul>
+    <h3>Creating an Arrays</h3>
+    <p>var fruits = ['Apple', 'Banana']; <br>
+            console.log(fruits.length); <br>
+            // 2
+    </p>
+    <h3>Associative Arrays</h3>
+    <p>Several programming languages allow arrays with named indexes. Arrays whose elements are set with named indexes rather than by numeric indexes are called associative arrays (or hashes). JavaScript does not allow arrays with named indexes, where arrays always use numbered indexes. 
+        Although that, javaScript objects are used in similar manner with named indexes which will be referred to as " associative array " below.
+     </p>
+     <h3>How to Create Javascript Associative Array ? </h3>
+
+    <p>To create an associative array, define a block of elements in a json form. Simply, the json form declares elements in-between curly braces and, for each element, key is set on left and contents on right of a colon (:). </p> 
+    <p>
+        var fruits = {"yellow": "banana", <br>
+        "red": "apple", <br>
+        "orange": "orange", <br>
+        "green": "mango"}; 
+    </p>
+
+</body>
+</html>
