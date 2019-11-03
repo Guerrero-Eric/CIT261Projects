@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CIT 261 Fluency 1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href = "../css/fluency_stylesheet.css" type = "text/css" rel = "stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<script type="text/javascript" src="fluency_1.js"></script>
+
+</head>
+
+<body>
+<!-- Navbar -->
+<div class="topnav">
+    <a href="../week 1/fluency_1.html">Fluency 1</a>
+    <a href="../week 2/fluency_2.html">fluency 2</a>
+    <a href="../week 3/fluency_3.html">fluency 3</a>
+    <a href="../week 4/fluency_4.html">fluency 4</a>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo">CIT 261</h1>
+    <p class="w3-xlarge">Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</p>
+</header>
+
+<!--Navrow-->
+<div class="row">
+    <div class="col-3 col-s-3 menu">
+        <ul>
+            <a href="#link1"><li>loop</li></a>
+            <a href="#link2"><li>conditional statements</li></a>
+            <a href="#link3"><li>functions</li></a>
+            <a href="#link3"><li>variables</li></a>
+            <a href="#link4"><li>parameters</li></a>
+            <a href="#link5"><li>arrays</li></a>
+        </ul>
+    </div>
+
+
+<div class="col-6 col-s-9">
+<!-- First Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1>loops</h1>
+            <h5 class="w3-padding-32">Loops can execute a block of code a number of times.</h5>
+            <div class="w3-text-grey">
+                <p>for loop:</p>
+                <pre>   var i;
+                    for (i = 0; i < 10; i++) 
+                    {
+                        document.write("Hello World!\n");
+                    } 
+            </pre>
+            <p>while loop: </p>
+            <pre>   i = 0;   
+                while (i < 10) {
+                document.write("Hello World!\n");
+                i++;
+              }
+            </pre>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <pre class="w3-margin w3-xlarge">  
+      <h3>For Loop Output:</h3>
+      <script>myloop();</script>   
+    </div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+      
+          <div class="w3-twothird">
+            <h1>Conditional Statements</h1>
+            <h5 class="w3-padding-32"> Conditional statements are used to perform different actions based on different conditions.</h5>
+      
+            <div class="w3-text-grey">
+                    <p>In JavaScript we have the following conditional statements:</p>
+                    <ul class=square>
+                        <li>Use <a class=related href="#if">if</a> to specify a block of code to be executed, if a specified condition is true </li> 
+                        <li>Use <a class=related href="#else">else</a> to specify a block of code to be executed, if the same condition is false </li> 
+                        <li>Use <a class=related href="#elseif">else if</a> to specify a new condition to test, if the first condition is false</li>
+                    </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <pre class="w3-margin w3-xlarge"> 
+//Use the if statement to specify a block of JavaScript code to be executed if a condition is true.   
+    if (time < 10) 
+    {greeting = "Good morning"; } 
+
+//Use the else if statement to specify a new condition if the first condition is false.
+    else if (time < 20) 
+    { greeting = "Good day"; }
+
+//Use the else statement to specify a block of code to be executed if the condition is false.
+    else { greeting = "Good evening";  }
+    </pre>
+    <h3>result:</h3>
+    <script>myifFunction();</script>
+  </div>
+
+<!-- Third Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1>Functions</h1>
+            <h5 class="w3-padding-32">Functions are the main “building blocks” of the program. </h5>
+            <h5>They allow the code to be called many times without repetition.</h5>
+            <div class="w3-text-grey">
+                    <p>To create a function we can use a function declaration.<br>
+                        It looks like this:</p>
+                    <pre>
+                    function myFunction() {
+                        document.getElementById("message").innerHTML = "Hello World";
+                    }
+        Our new function can be called by its id:  id="message"
+            function myFunction() {
+                document.getElementById("message").innerHTML = "Hello World";
+                }
+                    </pre>
+                    <p>The call to id="message" executes the code of the function.<br> 
+                        Here we will see the message when we click the button.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <p class="w3-margin w3-xlarge"> 
+    <button onclick="myFunction()">Click me</button>
+      <p id="message"></p>
+      </p>
+    </div>
+
+   <!-- Fourth Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1>Variables</h1>
+            <h5 class="w3-padding-32">Variables are named values and can store any type of JavaScript value.</h5>
+            <div class="w3-text-grey">
+                <p> Here’s how to declare a variable:</p>
+                <p>var x = 100;</p>
+                <ul>
+                    <li> And here’s what’s happening in the example above: </li>
+                    <li> var is the keyword that tells JavaScript you’re declaring a variable. </li>
+                    <li> x is the name of that variable. </li>
+                    <li> = is the operator that tells JavaScript a value is coming up next. </li>
+                    <li> 100 is the value for the variable to store. </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <p class="w3-margin w3-xlarge"> </p>   
+    </div>
+
+<!-- Fifth Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1>Parameters</h1>
+            <h5 class="w3-padding-32">Function parameters are the names listed in the function definition.</h5>
+            <div class="w3-text-grey">
+                    <h3>Parameter Rules</h3>
+                    <p>
+                        JavaScript function definitions do not specify data types for parameters. <br>
+                        JavaScript functions do not perform type checking on the passed arguments. <br>
+                        JavaScript functions do not check the number of arguments received.
+                    </p>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <p class="w3-margin w3-xlarge"></p>  
+    </div>
+<!-- Sixth Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1>Arrays</h1>
+            <h5 class="w3-padding-32">Arrays are a fundamental part of most programming languages and scripts.
+            </h5>
+            <div class="w3-text-grey">
+                    <p>Using arrays, you can store multiple values under a single name. Instead of using a separate variable for each item, you can use one array to hold all of them. </P>
+    <ul class=square>
+        <li><a class=related href="#create">Creating Arrays</a> 
+        <li><a class=related href="#associative">Associative Arrays</a></li>
+        <li><a class=related href="#multidim">Multidimensional Arrays</a> </li>
+    </ul>
+    <h3>Creating an Arrays</h3>
+    <p>var fruits = ['Apple', 'Banana']; <br>
+        This array holds the values Apple and Banana <br>
+    </p>
+    <h3>Associative Arrays</h3>
+    <p>Several programming languages allow arrays with named indexes. Arrays whose elements are set with named indexes rather than by numeric indexes are called associative arrays (or hashes). JavaScript does not allow arrays with named indexes, where arrays always use numbered indexes. 
+        Although that, javaScript objects are used in similar manner with named indexes which will be referred to as " associative array " below.
+     </p>
+     <h3>How to Create Javascript Associative Array ? </h3>
+
+    <p>To create an associative array, define a block of elements in a json form. Simply, the json form declares elements in-between curly braces and, for each element, key is set on left and contents on right of a colon (:). </p> 
+    <p>
+        var fruits = {"yellow": "banana", <br>
+        "red": "apple", <br>
+        "orange": "orange", <br>
+        "green": "mango"}; 
+    </p>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <p class="w3-margin w3-xlarge"></p>  
+    </div>
+
+</div>
+
+<div class="footer">
+  <p> CIT 261<br>
+        Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
+    </p>
+</div>
+</body>
+</html>

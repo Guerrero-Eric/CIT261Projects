@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CIT 261 Fluency 2</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href = "../css/fluency_stylesheet.css" type = "text/css" rel = "stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+
+<body>
+<!-- Navbar -->
+<div class="topnav">
+  <a href="../week 1/fluency_1.html">Fluency 1</a>
+  <a href="../week 2/fluency_2.html">fluency 2</a>
+  <a href="../week 3/fluency_3.html">fluency 3</a>
+  <a href="../week 4/fluency_4.html">fluency 4</a>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo">CIT 261</h1>
+    <p class="w3-xlarge">Object Creation Functions, Inheritance, Properties, Methods, Instantiation</p>
+</header>
+
+<!--Navrow-->
+<div class="row">
+    <div class="col-3 col-s-3 menu">
+        <ul>
+            <a href="#link1"><li>Object Creation</li></a>
+            <a href="#link2"><li>Inheritance</li></a>
+            <a href="#link3"><li>Properties</li></a>
+            <a href="#link4"><li>Method</li></a>
+            <a href="#link5"><li>Instantiation</li></a>
+        </ul>
+    </div>
+
+<div class="col-6 col-s-9">
+<!-- First Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1>Object</h1>
+            <p> An object, is a reference data type.
+               Variables that are assigned a reference value are given a reference or a pointer to that value.<br></p>
+               <p>You define (and create) a JavaScript object with an object literal:</p>
+               <div class="code">
+                 <p>var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</p>
+               </div>
+            <h4 class="w3-padding-32"> Object Creation Function</h4>
+              <p>The Object.create() creates a new object, using an existing object as the prototype of 
+                  the newly created object. </p>
+            <div class="w3-text-grey">
+                <p>An object can be created with the function Object.create().</p>
+            </div>
+            <div class="code">
+                <pre>
+                  function animal() {  
+                    this.name = 'Scar'; 
+                  } 
+                  
+                  function
+                  tiger() { 
+                    animal.call(this); 
+                  } 
+                     
+                  tiger.prototype = Object.create(animal.prototype);  
+                  const example = new tiger();
+                </pre>
+              </div>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <p class="w3-margin w3-xlarge"> If we compile and run the above program, then it will produce the following result − </p>
+      <p id="object"></p>
+    </div>
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+      
+          <div class="w3-twothird">
+            <h1>Inheritance</h1>
+            <h5 class="w3-padding-32"> JavaScript uses prototype based inheritance.</h5>
+      
+            <div class="w3-text-grey">
+                <p>Every object has a <b>prototype</b>,
+                  and when a method of the object is called then JavaScript tries to find the right
+                  function to execute from the prototype object.
+                </p>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <pre class="w3-margin w3-xlarge"> 
+            var animalA = function() {}; 
+
+            animalA.prototype.initialize = function(type, age)
+            {
+                this.type = type;
+                this.age = age;
+            }
+            
+            
+            var animalB = function() {};
+            animalB.prototype = new animalA();
+            
+            animalB.prototype.skill = function(subject)
+            {
+                document.getElementById('inherit').innerHTML= "This " + this.type + " is " + this.age +
+                 " years old, and it just learned " + subject;
+            }
+            
+            var me = new animalB();
+            
+            me.initialize("Tiger", 2);
+            me.skill("jump.");
+    </pre>
+    <h3>Output:</h3>
+    <p id="inherit"></p>
+    <script>inheritanceFunction();</script>
+  </div>
+
+  <!-- Third Grid -->
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1>Properties</h1>
+            <h5 class="w3-padding-32">
+              Properties are the values associated with a JavaScript object.
+              A JavaScript object is a collection of unordered properties.
+              Properties can usually be changed, added, and deleted, but some are read only.
+              </h5>
+            <div class="w3-text-grey">
+                <p>There are two different ways to access an object property:</p><br>
+                <p>objectName.property</p>
+                <p>objectName["property"]</p>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <pre class="w3-margin w3-xlarge">  </pre>
+    </div>
+
+    <!-- Fourth Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+              <div class="w3-twothird">
+                <h1>Methods</h1>
+                <h5 class="w3-padding-32">JavaScript methods are actions that can be performed on objects.</h5>
+                <div class="w3-text-grey">
+                    <p>You access an object method with the following syntax:</p>
+                    <br>
+                    <p>objectName.methodName()</p>
+                </div>
+              </div>
+            </div>
+        </div>
+          
+        <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+          <pre class="w3-margin w3-xlarge">  
+              This example accesses the fullName() method of a person object:
+
+              name = person.fullName();          
+          </pre>
+        </div>
+
+        <!-- Fifth Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+              <div class="w3-twothird">
+                <h1>Instantiation</h1>
+                <h5 class="w3-padding-32"> Instantiation patterns are different methods to create objects.</h5>
+                <div class="w3-text-grey">
+                    <p>With functional instantiation, we first create a function.</p>
+                    <p>Inside the function we create an empty object and add properties and methods to it.</p> 
+                    <p>We then return this object.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+          
+        <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+          <pre class="w3-margin w3-xlarge">  
+            var txt = '{"name" : "Adam" , "email" : "adm@gmail.com" , "contact" : "555-555-5555"}';
+            
+            var parsedtxt = JSON.parse(txt);
+    
+            document.getElementById('parsed').innerHTML = parsedtxt.name + ", " + parsedtxt.email;
+          
+          </pre>
+          <h3>Output:</h3>
+          <p id="parsed"></p>
+        </div>
+</div>
+</div>
+<div class="footer">
+  <p> Week 2 Fluency</p>
+</div>
+<script type="text/javascript" src="fluency_2.js"></script>
+</body>
+</html>

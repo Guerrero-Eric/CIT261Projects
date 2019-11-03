@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CIT 261 Fluency 8</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href = "../css/fluency_stylesheet.css" type = "text/css" rel = "stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+div#box1,#box2,#box3 {
+    background: #d13809;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 95px;
+    line-height: 95px;
+    text-align: center;
+    width: 95px;
+    display: inline-block;
+}
+#box3:hover {
+  background-color: coral;
+  width: 210px;
+  height: 95px;
+  border-radius: 6px;
+}
+
+.chocobo {
+  position: relative;
+  cursor: pointer;
+  width: 177px;
+  height: 160px;
+  right: 0;
+  transition: right 5s cubic-bezier(0, 0, 1, 1);
+}
+</style>
+
+</head>
+
+<body>
+<!-- Navbar -->
+<div class="topnav">
+    <a href="../week 1/fluency_1.html">Fluency 1</a>
+    <a href="../week 2/fluency_2.html">fluency 2</a>
+    <a href="../week 3/fluency_3.html">fluency 3</a>
+    <a href="../week 4/fluency_4.html">fluency 4</a>
+    
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo">CIT 261</h1>
+    <p class="w3-xlarge"> Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</p>
+</header>
+
+<!--Navrow-->
+<div class="row">
+
+    <div class="col-3 col-s-3 menu">
+        <ul>
+            <a href="#link1"><li>createElement</li></a>
+            <a href="#link2"><li>appendChild</li></a>
+            <a href="#link3"><li>insertBefore</li></a>
+            <a href="#link3"><li>removeChild</li></a>
+        </ul>
+    </div>
+
+
+
+    <div class="col-6 col-s-9">
+
+        <!-- first Grid -->
+        <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-twothird">
+                    <h1> Trigger transitions with Javascript</h1>
+                    <div class="w3-padding-32 code">
+                    <div id="box1" onmouseover="changeBG('box1','#F0F');" onmouseout="changeBG('box1','#d13809');">Float over</div>
+                    <div id="box2" onmouseover="fadeOut('box2');" onmouseout="fadeIn('box2');">Float over</div>
+                    <div id="box3">Hover</div>
+                </div>
+                </div>
+            </div>
+        </div>
+          
+        <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+            <p class="w3-margin w3-xlarge"></p> 
+        </div>
+
+         <!-- first Grid -->
+         <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+                <div class="w3-content">
+                    <div class="w3-twothird">
+                        <h1> CSS3 Transitions</h1>
+                        <div class="w3-padding-32 code">
+                            <img class="chocobo" src="../images/chocobo.gif" onclick="this.style.right='450px'">
+                    </div>
+                    </div>
+                </div>
+            </div>
+              
+            <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+                <p class="w3-margin w3-xlarge"></p> 
+            </div>
+
+    </div>
+
+</div>
+
+<div class="footer">
+  <p> CIT 261<br>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</p>
+</div>
+
+<script type="text/javascript" src="fluency_8.js"></script>
+</body>
+</html>
