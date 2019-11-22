@@ -13,8 +13,6 @@ const example = new tiger();
    
 document.getElementById('object').innerHTML = example.name;
 
-
-
 var animalA = function() {}; 
 
           animalA.prototype.initialize = function(type, age)
@@ -38,3 +36,9 @@ var animalA = function() {};
           me.initialize("Tiger", 2);
           me.skill("jump.");
 
+          
+          var txt = '{"name" : "Adam" , "email" : "adm@gmail.com" , "contact" : "555-555-5555"}';
+            
+          var parsedtxt = JSON.parse(txt);
+  
+          document.getElementById('parsed').innerHTML = parsedtxt.name + ", " + parsedtxt.email;

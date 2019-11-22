@@ -15,6 +15,8 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+.rect{ width: 80px; height: 30px; background-color: rgb(24, 24, 24);}
+
 </style>
 
 </head>
@@ -22,14 +24,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <body>
 <!-- Navbar -->
 <div class="topnav">
-    <a href="../fluency 1/fluency_1.html">Fluency 1</a>
-    <a href="../fluency 2/fluency_2.html">fluency 2</a>
-    <a href="../fluency 3/fluency_3.html">fluency 3</a>
-    <a href="../fluency 4/fluency_4.html">fluency 4</a>
-    <a href="../fluency 5/fluency_5.html">Fluency 5</a>
-    <a href="../fluency 6/fluency_6.html">fluency 6</a>
-    <a href="../fluency 7/fluency_7.html">fluency 7</a>
-    <a href="../fluency 8/fluency_8.html">fluency 8</a>
+        <a href="../fluency 1/fluency_1.html">Fluency 1</a>
+        <a href="../fluency 2/fluency_2.html">fluency 2</a>
+        <a href="../fluency 3/fluency_3.html">fluency 3</a>
+        <a href="../fluency 4/fluency_4.html">fluency 4</a>
+        <a href="../fluency 5/fluency_5.html">Fluency 5</a>
+        <a href="../fluency 6/fluency_6.html">fluency 6</a>
+        <a href="../fluency 7/fluency_7.html">fluency 7</a>
+        <a href="../fluency 8/fluency_8.html">fluency 8</a>
+        <a href="../fluency 9/fluency_9.html">Fluency 9</a>
+        <a href="../fluency 10/fluency_10.html">fluency 10</a>
+        <a href="../fluency 11/fluency_11.html">fluency 11</a>
+        <a href="../fluency 12/fluency_12.html">fluency 12</a>
+        <a href="../fluency 13/fluency_13.html">fluency 13</a>
 </div>
 
 <!-- Header -->
@@ -57,13 +64,58 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                 <div class="w3-twothird">
                     <h1>CSS Transform</h1>
                     <h5 class="w3-padding-32">
+                            The transform property applies a 2D or 3D transformation to an element. 
+                            This property allows you to rotate, scale, move, skew, etc., elements.
                         <br>
-                    </h5>
-                        <div class="block" id="transformDIV">
-                        </div><br>
-                            <div class="block" id="transformDIV2">
+                    </h5>     
+                    <h4 class="rect" style="color: aliceblue; text-align: left;">HTML</h4>             
+
+                    <div class="code">  
+                        <pre>
+        &#60div class="block" id="transformDIV">
+        &#60img src="../images/Steal_Locke.gif" alt="locke sprite" 
+        width="52" height="52">
+        &#60/div>
+                        </pre>
+                    </div>   
+                    <h4 class="rect" style="color: aliceblue; text-align: left;">CSS</h4>             
+
+                    <div class="code">  
+                        <pre>
+        div #transformDIV:hover {
+        transition-duration: 2s, 1s;
+        transition-timing-function: ease;
+        transition-delay: 0s, 1s;
+        transform: rotate(360deg)}
+                        </pre>
+                    </div>
+
+                    <h4 class="rect" style="color: aliceblue; text-align: left;">Result</h4>             
+
+                    <div class="code">  
+                            <div class="block" id="transformDIV">
+                                    <img src="../images/Steal_Locke.gif" alt="locke sprite" width="52" height="52">
                             </div>
-                    <div class="w3-text-grey"><br>
+                    </div>
+                         <div class="w3-text-grey"> 
+                                <p>At their most basic level, transforms move or change the appearance of an element, while transitions make the element smoothly and gradually change from one state to another.</p>
+                                <br> 
+                                <div class="block" id="transformDIV">
+                                        <img src="../images/Steal_Locke.gif" alt="locke sprite" width="52" height="52">
+                                </div>
+                                <br>
+                                <div class="block" id="transformDIV2">
+                                        <img src="../images/Edgar_-_Auto_Crossbow.png" alt="Edgar sprite" width="52" height="52">
+                                </div>
+                                <br>
+                                <div class="block" id="transformDIV3">
+                                        <img src="../images/Pink_Gogo_Sprite.png" alt="Gogo sprite" width="52" height="52">
+                                </div>
+                                <br>
+                                <div class="block" id="transformDIV4">
+                                        <img src="../images/Esper_Terra's_Tent_Sprite.png" alt="Terra sprite" width="52" height="52">
+                                </div>
+                                <br>
                     </div>
                 </div>
             </div>
@@ -82,7 +134,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <div class="footer">
-  <p> CIT 261<br></p>
+    <p> CIT 261<br>
+    Designing, Defining, and Triggering CSS3 Transform without Custom Libraries (Thought Library)
+    </p>
 </div>
 
 </body>

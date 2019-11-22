@@ -19,10 +19,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <body>
 <!-- Navbar -->
 <div class="topnav">
-  <a href="../week 1/fluency_1.html">Fluency 1</a>
-  <a href="../week 2/fluency_2.html">fluency 2</a>
-  <a href="../week 3/fluency_3.html">fluency 3</a>
-  <a href="../week 4/fluency_4.html">fluency 4</a>
+    <a href="../fluency 1/fluency_1.html">Fluency 1</a>
+    <a href="../fluency 2/fluency_2.html">fluency 2</a>
+    <a href="../fluency 3/fluency_3.html">fluency 3</a>
+    <a href="../fluency 4/fluency_4.html">fluency 4</a>
+    <a href="../fluency 5/fluency_5.html">Fluency 5</a>
+    <a href="../fluency 6/fluency_6.html">fluency 6</a>
+    <a href="../fluency 7/fluency_7.html">fluency 7</a>
+    <a href="../fluency 8/fluency_8.html">fluency 8</a>
+    <a href="../fluency 9/fluency_9.html">Fluency 9</a>
+    <a href="../fluency 10/fluency_10.html">fluency 10</a>
+    <a href="../fluency 11/fluency_11.html">fluency 11</a>
+    <a href="../fluency 12/fluency_12.html">fluency 12</a>
+    <a href="../fluency 13/fluency_13.html">fluency 13</a>
 </div>
 
 <!-- Header -->
@@ -50,23 +59,29 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
             <h5 class="w3-padding-32">JSON.parse() method converts a JSON string representation to a JavaScript value (JSON object).</h5>
             <div class="w3-text-grey">
                 <p>Parameters: It accepts two parameter which are listed below:</p>
-                <br>
                 <p>string: It is required parameter and it contains string which is written in JSON format.</p>
                 <p>function: It is optional parameter and used to transform result.</p>
             </div>
+            <pre class="code">
+              var txt = 
+              '{
+                "name" : "Adam" , 
+                "email" : "adm@gmail.com" , 
+                "contact" : "555-555-5555"
+              }';
+        
+              var parsedtxt = JSON.parse(txt);
+        
+              document.getElementById('parsed').innerHTML =
+               parsedtxt.name + ", " + parsedtxt.email;
+              
+            </pre>
           </div>
         </div>
     </div>
       
     <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-      <pre class="w3-margin w3-xlarge">  
-        var txt = '{"name" : "Adam" , "email" : "adm@gmail.com" , "contact" : "555-555-5555"}';
-        
-        var parsedtxt = JSON.parse(txt);
-
-        document.getElementById('parsed').innerHTML = parsedtxt.name + ", " + parsedtxt.email;
-      
-      </pre>
+      <div class="w3-margin w3-xlarge"> </div>
       <h3>Output:</h3>
       <p id="parsed"></p>
     </div>
@@ -87,25 +102,26 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                 <p>space: It is also an optional parameter. This argument is used to control spacing in the final string generated using JSON.stringify() function.
                    It can be number or a string if it is a number than the specified number of spaces indented to the final string and if it is a string then that string is (upto 10 characters) used for indentation.</p>
                 <p>Return Value: It returns a string for a given value.</p>
-          
             </div>
+            <pre class="code">
+                var books = {
+                  title : 'javascript novice to ninja' ,
+                  year : "2017" ,
+                  edition : 2
+                };
+          
+              var stringifytxt = JSON.stringify(books);
+          
+              document.getElementById('stringify').innerHTML = 
+                stringifytxt;
+            </pre>
           </div>
         </div>
     </div>
       
     <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-      <pre class="w3-margin w3-xlarge"> 
-        var books = {
-          title : 'javascript novice to ninja' ,
-          year : "2017" ,
-          edition : 2
-        };
-  
-      var stringifytxt = JSON.stringify(books);
-  
-      document.getElementById('stringify').innerHTML = stringifytxt;
-    
-    </pre>
+      <div class="w3-margin w3-xlarge"> 
+      </div>
     <h3>Output:</h3>
     <p id="stringify"></p>
   </div>

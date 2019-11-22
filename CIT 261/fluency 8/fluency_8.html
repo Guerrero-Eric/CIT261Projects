@@ -23,12 +23,26 @@ div#box1,#box2,#box3 {
     width: 95px;
     display: inline-block;
 }
-#box3:hover {
-  background-color: coral;
-  width: 210px;
-  height: 95px;
-  border-radius: 6px;
+
+#growing {
+  transition: font-size 3s, color 2s;
 }
+
+@keyframes move {
+        0% {margin-left: 0%; background-color: rgba(80,80,200,0);}
+        25% {margin-left: 20%; background-color: rgba(80,80,200,0.25);}
+        50% {margin-left: 40%;background-color: rgba(80,80,200,0.50);}
+        75% {margin-left: 60%;background-color: rgba(80,80,200,0.75);}
+        100%{margin-left: 80%;background-color: rgba(80,80,200,1);}
+    }
+    
+    .div2.animate {
+        float: left;
+        animation-name: move;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
 
 .chocobo {
   position: relative;
@@ -45,10 +59,19 @@ div#box1,#box2,#box3 {
 <body>
 <!-- Navbar -->
 <div class="topnav">
-    <a href="../week 1/fluency_1.html">Fluency 1</a>
-    <a href="../week 2/fluency_2.html">fluency 2</a>
-    <a href="../week 3/fluency_3.html">fluency 3</a>
-    <a href="../week 4/fluency_4.html">fluency 4</a>
+    <a href="../fluency 1/fluency_1.html">Fluency 1</a>
+    <a href="../fluency 2/fluency_2.html">fluency 2</a>
+    <a href="../fluency 3/fluency_3.html">fluency 3</a>
+    <a href="../fluency 4/fluency_4.html">fluency 4</a>
+    <a href="../fluency 5/fluency_5.html">Fluency 5</a>
+    <a href="../fluency 6/fluency_6.html">fluency 6</a>
+    <a href="../fluency 7/fluency_7.html">fluency 7</a>
+    <a href="../fluency 8/fluency_8.html">fluency 8</a>
+    <a href="../fluency 9/fluency_9.html">Fluency 9</a>
+    <a href="../fluency 10/fluency_10.html">fluency 10</a>
+    <a href="../fluency 11/fluency_11.html">fluency 11</a>
+    <a href="../fluency 12/fluency_12.html">fluency 12</a>
+    <a href="../fluency 13/fluency_13.html">fluency 13</a>
     
 </div>
 
@@ -79,34 +102,32 @@ div#box1,#box2,#box3 {
             <div class="w3-content">
                 <div class="w3-twothird">
                     <h1> Trigger transitions with Javascript</h1>
+                    <p>
+                        CSS transitions create a way to control the speed that CSS properties change. 
+                        This allows us to change things over time instead of having changes take place instantly.
+                     </p>
                     <div class="w3-padding-32 code">
-                    <div id="box1" onmouseover="changeBG('box1','#F0F');" onmouseout="changeBG('box1','#d13809');">Float over</div>
-                    <div id="box2" onmouseover="fadeOut('box2');" onmouseout="fadeIn('box2');">Float over</div>
-                    <div id="box3">Hover</div>
-                </div>
+                        <div id="box1" onmouseover="changeBG('box1','#F0F');" onmouseout="changeBG('box1','#d13809');">Float over</div>
+                        <div id="box2" onmouseover="fadeOut('box2');" onmouseout="fadeIn('box2');">Float over</div>
+                    </div>
                 </div>
             </div>
         </div>
-          
-        <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-            <p class="w3-margin w3-xlarge"></p> 
-        </div>
-
-         <!-- first Grid -->
-         <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
                 <div class="w3-content">
                     <div class="w3-twothird">
                         <h1> CSS3 Transitions</h1>
                         <div class="w3-padding-32 code">
-                            <img class="chocobo" src="../images/chocobo.gif" onclick="this.style.right='450px'">
-                    </div>
+
+                            <button class="animate div2" id="growing animationCat" onclick="moveCat()" type="button">Click me</button>
+                        </div>
                     </div>
                 </div>
             </div>
-              
-            <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-                <p class="w3-margin w3-xlarge"></p> 
-            </div>
+        <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+            <p class="w3-margin w3-xlarge"></p> 
+        </div>
+
 
     </div>
 

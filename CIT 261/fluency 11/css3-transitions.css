@@ -65,7 +65,7 @@ button:active {
     text-align: center;
     transition-property: background, border-radius;
     transition-duration: 2s, 1s;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease-out;
     transition-delay: 0s, 1s;
     display:inline-block;
 
@@ -85,3 +85,13 @@ button:active {
     background: rgb(94, 107, 223);
     border-radius: 50%;
 }
+
+
+.chocobo {
+    position: relative;
+    cursor: pointer;
+    width: 177px;
+    height: 160px;
+    right: 0;
+    transition: right 5s cubic-bezier(0, 0, 1, 1);
+  }

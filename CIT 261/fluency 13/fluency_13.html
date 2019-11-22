@@ -18,6 +18,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .block{ width: 400px; height: 150px; background-color: rgb(182, 178, 178); border: 3px solid black;}
 div #transformDIV {transform: rotate(30deg)}
 div #transformDIV2 {transform: translate3d(25px, -25px, 70px);}
+.rect{ width: 200px; height: 40px; background-color: rgb(24, 24, 24);}
+
 </style>
 
 </head>
@@ -26,19 +28,26 @@ div #transformDIV2 {transform: translate3d(25px, -25px, 70px);}
 <!-- Navbar -->
 <div class="topnav">
     <a href="../fluency 1/fluency_1.html">Fluency 1</a>
-    <a href="../fluency 2/fluency_2.html">fluency 2</a>
-    <a href="../fluency 3/fluency_3.html">fluency 3</a>
-    <a href="../fluency 4/fluency_4.html">fluency 4</a>
-    <a href="../fluency 5/fluency_5.html">Fluency 5</a>
-    <a href="../fluency 6/fluency_6.html">fluency 6</a>
-    <a href="../fluency 7/fluency_7.html">fluency 7</a>
-    <a href="../fluency 8/fluency_8.html">fluency 8</a>
+        <a href="../fluency 2/fluency_2.html">fluency 2</a>
+        <a href="../fluency 3/fluency_3.html">fluency 3</a>
+        <a href="../fluency 4/fluency_4.html">fluency 4</a>
+        <a href="../fluency 5/fluency_5.html">Fluency 5</a>
+        <a href="../fluency 6/fluency_6.html">fluency 6</a>
+        <a href="../fluency 7/fluency_7.html">fluency 7</a>
+        <a href="../fluency 8/fluency_8.html">fluency 8</a>
+        <a href="../fluency 9/fluency_9.html">Fluency 9</a>
+        <a href="../fluency 10/fluency_10.html">fluency 10</a>
+        <a href="../fluency 11/fluency_11.html">fluency 11</a>
+        <a href="../fluency 12/fluency_12.html">fluency 12</a>
+        <a href="../fluency 13/fluency_13.html">fluency 13</a>
 </div>
 
 <!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-    <h1 class="w3-margin w3-jumbo">CIT 261</h1>
-    <p class="w3-xlarge">Designing, Defining, and Triggering CSS3 Animation without Custom Libraries (Thought Library)</p>
+<header class="w3-container w3-red w3-center headerChange" style="padding:128px 16px">
+    <div class="sliding" id="div1">
+        <h1 class="w3-margin w3-jumbo">CIT 261</h1>
+        <p class="w3-xlarge">Designing, Defining, and Triggering CSS3 Animation without Custom Libraries (Thought Library)</p>
+    </div>
 </header>
 
 <!--Navrow-->
@@ -62,6 +71,20 @@ div #transformDIV2 {transform: translate3d(25px, -25px, 70px);}
                     <h5 class="w3-padding-32">
                         <br>
                     </h5>
+                    <p>
+                            Animation is process of making shape changes and creating motions with elements.
+                            @Keyframes
+                            Keyframes will control the intermediate animation steps in CSS3. The @keyframe rules is aplyed to the elements that receive the animations. <br>
+                    </p>
+                    <br>
+                    <p class="w3-text-grey">Example of @keyframe syntaxe:</p>
+                    <pre class="code">
+                @keyframes example1 {
+                from {background-color: blue;}
+                to {background-color: yellow;}
+                }
+                    </pre>
+                    <p class="rect" style="color: aliceblue; text-align: left;"> Hover Over Example</p>             
                    <div class="code">
                        <div class="stage">
                        <figure class="ball"></figure>
@@ -86,7 +109,9 @@ div #transformDIV2 {transform: translate3d(25px, -25px, 70px);}
 </div>
 
 <div class="footer">
-  <p> CIT 261<br></p>
+  <p> CIT 261<br>
+    Designing, Defining, and Triggering CSS3 Animation without Custom Libraries (Thought Library)
+</p>
 </div>
 
 </body>

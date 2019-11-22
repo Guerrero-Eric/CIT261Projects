@@ -25,14 +25,19 @@ div #transformDIV2 {transform: translate3d(25px, -25px, 70px);}
 <body>
 <!-- Navbar -->
 <div class="topnav">
-    <a href="../fluency 1/fluency_1.html">Fluency 1</a>
-    <a href="../fluency 2/fluency_2.html">fluency 2</a>
-    <a href="../fluency 3/fluency_3.html">fluency 3</a>
-    <a href="../fluency 4/fluency_4.html">fluency 4</a>
-    <a href="../fluency 5/fluency_5.html">Fluency 5</a>
-    <a href="../fluency 6/fluency_6.html">fluency 6</a>
-    <a href="../fluency 7/fluency_7.html">fluency 7</a>
-    <a href="../fluency 8/fluency_8.html">fluency 8</a>
+        <a href="../fluency 1/fluency_1.html">Fluency 1</a>
+        <a href="../fluency 2/fluency_2.html">fluency 2</a>
+        <a href="../fluency 3/fluency_3.html">fluency 3</a>
+        <a href="../fluency 4/fluency_4.html">fluency 4</a>
+        <a href="../fluency 5/fluency_5.html">Fluency 5</a>
+        <a href="../fluency 6/fluency_6.html">fluency 6</a>
+        <a href="../fluency 7/fluency_7.html">fluency 7</a>
+        <a href="../fluency 8/fluency_8.html">fluency 8</a>
+        <a href="../fluency 9/fluency_9.html">Fluency 9</a>
+        <a href="../fluency 10/fluency_10.html">fluency 10</a>
+        <a href="../fluency 11/fluency_11.html">fluency 11</a>
+        <a href="../fluency 12/fluency_12.html">fluency 12</a>
+        <a href="../fluency 13/fluency_13.html">fluency 13</a>
 </div>
 
 <!-- Header -->
@@ -61,20 +66,57 @@ div #transformDIV2 {transform: translate3d(25px, -25px, 70px);}
                 <div class="w3-twothird">
                     <h1>CSS Transitions</h1>
                     <h5 class="w3-padding-32">
+                        CSS transitions create a way to control the speed that CSS properties change. <br>
+                        This allows us to change things over time instead of having changes take place instantly. 
                         <br>
                     </h5>
                    <div class="code">
                        <div class="box"> </div>
                        <div class="box2"> </div>
-                       <div class="box3"> </div>
+                       <div class="box3"></div>
                        <button>Button</button>
                    </div>
                     <div class="w3-text-grey"><br>
                     </div>
                 </div>
-            </div>
-        </div>
-          <br>
+        
+            <br>
+            <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+                    <p> 
+                        The transition-timing-function property specifies the speed curve of the transition effect. <br>
+                         <br>
+                    </p>
+                    <ul>
+                        <li>ease: the default value, increases in velocity towards the middle of the animation, slowing back down at the end.</li>
+                        <li>linear: animates at an even speed</li>
+                        <li>ease-in: slow at the beginning, fast/abrupt at the end</li>
+                        <li>ease-out: fast/abrupt at the beginning, slow at the end</li>
+                    </ul>
+                        <pre class="code">
+                    .examples {
+
+                        transition-timing-function: linear;
+                        transition-timing-function: cubic-bezier(0, 0, 1, 1);
+                    
+                        transition-timing-function: ease;
+                        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+                    
+                        transition-timing-function: ease-in-out;
+                        transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    
+                        transition-timing-function: ease-in;
+                        transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+                    
+                        transition-timing-function: ease-out;
+                        transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+                    
+                    }
+                        </pre> <br>
+                        <div class="w3-padding-32 w3-light-grey">
+                                <img class="chocobo" src="../images/chocobo.gif" onclick="this.style.right='450px'">
+                        </div>
+                    </div>
+                </div> </div>
         <div class="w3-container w3-black w3-center w3-padding-64">
             <div class="w3-margin w3-xlarge">
                    
@@ -88,7 +130,9 @@ div #transformDIV2 {transform: translate3d(25px, -25px, 70px);}
 </div>
 
 <div class="footer">
-  <p> CIT 261<br></p>
+    <p> CIT 261<br>
+    Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (Thought Library)
+    </p>
 </div>
 
 </body>

@@ -20,11 +20,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <body>
 <!-- Navbar -->
 <div class="topnav">
-    <a href="../week 1/fluency_1.html">Fluency 1</a>
-    <a href="../week 2/fluency_2.html">fluency 2</a>
-    <a href="../week 3/fluency_3.html">fluency 3</a>
-    <a href="../week 4/fluency_4.html">fluency 4</a>
-    
+    <a href="../fluency 1/fluency_1.html">Fluency 1</a>
+    <a href="../fluency 2/fluency_2.html">fluency 2</a>
+    <a href="../fluency 3/fluency_3.html">fluency 3</a>
+    <a href="../fluency 4/fluency_4.html">fluency 4</a>
+    <a href="../fluency 5/fluency_5.html">Fluency 5</a>
+    <a href="../fluency 6/fluency_6.html">fluency 6</a>
+    <a href="../fluency 7/fluency_7.html">fluency 7</a>
+    <a href="../fluency 8/fluency_8.html">fluency 8</a>
+    <a href="../fluency 9/fluency_9.html">Fluency 9</a>
+    <a href="../fluency 10/fluency_10.html">fluency 10</a>
+    <a href="../fluency 11/fluency_11.html">fluency 11</a>
+    <a href="../fluency 12/fluency_12.html">fluency 12</a>
+    <a href="../fluency 13/fluency_13.html">fluency 13</a>
 </div>
 
 <!-- Header -->
@@ -39,7 +47,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <ul>
             <a href="#link1"><li>storage api</li></a>
             <a href="#link2"><li>local storage</li></a>
-            <a href="#link3"><li>methods</li></a>
+            <a href="#link3"><li>objects</li></a>
+            <a href="#link4"><li>methods</li></a>            
+            <a href="#link5"><li>arrays</li></a>            
+            <a href="#link6"><li>associative array</li></a>            
+
         </ul>
     </div>
 
@@ -72,7 +84,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
  
 
-   <!--  Grid -->
+   <!-- Second Grid -->
     <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
         <div class="w3-content">
           <div class="w3-twothird">
@@ -80,7 +92,38 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
             <h5 class="w3-padding-32">LocalStorage is a type of web storage that allows Javascript websites and apps to store and access data right in the browser with no expiration date. 
                 This means the data stored in the browser will persist even after the browser window has been closed.</h5>
             <div class="w3-text-grey">
-               
+              syntax example:
+            </div>
+              <pre class="code">
+                localStorage.setItem("username", "Bill");
+                To access stored data
+                alert("itemName = " = localStorage.getItem("itemName"));
+              </pre>
+          </div>
+        </div>
+    </div>
+      
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <p class="w3-margin w3-xlarge"></p> 
+    </div>
+
+    <!--  Third Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1>Objects</h1>
+            <h5 class="w3-padding-32"> Creating an API object.</h5>
+              <p>
+              In this example we set the itemName and the value. <br>
+              Here you can create your own object and store a name.
+             </p>
+            <div class="w3-text-grey">
+                Enter Name:
+                <input id="name" type="text">
+                <button onclick="save()" type="button">Save</button> <br>
+                Now we can retrieve your input from local storage. <br> 
+                <button onclick="show()" type="button">Retrieve</button>
+                <div id="outputName"></div>
             </div>
           </div>
         </div>
@@ -106,32 +149,117 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
           </div>
         </div>
     </div>
-      
-    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <pre class="w3-margin w3-xlarge">
-        const testObject = {
-        name: "Eric Guerrero",
-        location: "Rexburg, Idaho",
-        major: "Software Engineering",
-        }
-      // Check browser support
-      if (typeof(Storage) !== "undefined") {
-  
-      // Store
-        localStorage.setItem('user', JSON.stringify(testObject));
-        
-      // Retrieve
-        document.getElementById("result").innerHTML = localStorage.getItem('user');
-        } 
-        
-        else {
-          document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+    <div class="w3-light-grey w3-container">
+
+      <pre class="code">
+         const testObject = {
+          name: "Eric Guerrero",
+          location: "Rexburg, Idaho",
+          major: "Software Engineering",
           }
-  
-        Result:</pre>
-          <div class="code" id="result" style="color:black"></div>
+        // Check browser support
+        if (typeof(Storage) !== "undefined") {
+    
+        // Store
+          localStorage.setItem('user', JSON.stringify(testObject));
+          
+        // Retrieve
+          document.getElementById("result").innerHTML = localStorage.getItem('user');
+          } 
+          
+          else {
+            document.getElementById("result").innerHTML = 
+              "Sorry, your browser does not support Web Storage...";
+            }
+          </pre>
+    </div>
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64"> results:
+      <div class="w3-margin w3-xlarge"></div>
+        <div id="result" style="color:white"></div>
     </div>
 
+    <!-- Array Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Arrays</h1>
+        <h5 class="w3-padding-32">Working with arrays.</h5>
+           <p>We can convert to a string using JSON.stringify() and convert back using JSON.parse. <br>
+           Lets create an array list.</p>
+        <div class="w3-text-grey">
+            Index 0:<input id="One" type="text"> <br>
+            Index 1:<input id="Two" type="text"> <br>
+            Index 2:<input id="Three" type="text"> <br>
+            <button onclick="saveArray()" type="button">
+                Save Array</button><br>
+                Now lets see out new array. 
+                (choose 0,1,2)
+                <input id="arrayNum" type="text">
+                <button onclick="displayArray()" type="button">Display</button> <br>
+                <div id="arrayOutput"></div>
+        </div>
+      </div>
+    </div>
+</div>
+  
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+  <p class="w3-margin w3-xlarge"></p>  
+</div>
+
+<!-- first Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Storage API</h1>
+        <h5 class="w3-padding-32">The Web Storage API provides a way to store data in the browser.
+           It defines two storage mechanisms which are very important: Session Storage and Local Storage.</h5>
+        <div class="w3-text-grey">
+                <p> To use localStorage in your web applications, there are five methods to choose from:</p>
+            <ul>
+                <li> setItem(): Add key and value to localStorage </li>
+                <li> getItem(): Retrieve a value by the key from localStorage        </li>
+                <li> removeItem(): Remove an item by key from localStorage</li>
+                <li> clear(): Clear all localStorage   </li>
+                <li> key(): Passed a number to retrieve nth key of a localStorage      </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+</div>
+  
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+  <p class="w3-margin w3-xlarge"></p>  
+</div>
+
+
+<!-- Associative Array Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Associative Array</h1>
+        <h5 class="w3-padding-32"></h5>
+        <div class="w3-text-grey">
+            Lets make an associative array list. </div>
+           name: <input id="name" type="text"> <br>
+           food: <input id="food" type="text"> <br>
+           music: <input id="music" type="text"> <br>
+           movie: <input id="movie" type="text"> <br>
+           hobby: <input id="hobby" type="text"> <br>
+           <button onclick="saveAssocArray()" type="button">Save Associative Array</button> <br>
+           <button onclick="displayAssocArrayValue()" type="button">Display Value</button> <br>
+           name: <div id="nameOutput"></div>
+           food: <div id="foodOutput"></div>
+           music: <div id="musicOutput"></div>
+           movie: <div id="movieOutput"></div>
+           hobby: <div id="hobbyOutput"></div>
+      </div>
+    </div>
+</div>
+  
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+  <p class="w3-margin w3-xlarge"></p> 
+</div>
+    
 </div>
 
 <div class="footer">

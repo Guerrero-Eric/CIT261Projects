@@ -24,12 +24,13 @@ function slideIn(el) {
     elem.style.left = "0px";
 }
 
-function slideOut() {image='../images/chocobo.gif'
-    var elem = document.slide.src = image;
-    elem.style.transition = "left 0.5s ease-out 0s";
-    elem.style.left = "450px";
-}
+     growing.onclick = function() {
+        this.style.fontSize = '36px';
+        this.style.color = 'red';
+      };
 
-function myFunction() {
-    document.getElementById("myDIV").style.transition = "all 2s";     // Standard syntax
-  }
+
+    // move cat from left to right
+function moveCat(){
+    document.getElementById("animationCat").classList.toggle("animate");
+}
