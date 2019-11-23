@@ -24,13 +24,12 @@ function slideIn(el) {
     elem.style.left = "0px";
 }
 
-     growing.onclick = function() {
-        this.style.fontSize = '36px';
-        this.style.color = 'red';
-      };
+growing.onclick = function() {
+    this.style.fontSize = '50px';
+    this.style.color = 'red'; 
+};
 
 
-    // move cat from left to right
-function moveCat(){
-    document.getElementById("animationCat").classList.toggle("animate");
-}
+function ani(){
+    document.getElementById('something').className ='classname';
+    }

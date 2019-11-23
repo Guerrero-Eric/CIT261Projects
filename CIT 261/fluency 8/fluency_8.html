@@ -4,7 +4,8 @@
 <title>CIT 261 Fluency 8</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href = "../css/fluency_stylesheet.css" type = "text/css" rel = "stylesheet">
+<link rel="stylesheet" href = "../css/fluency_stylesheet.css" type = "text/css">
+<link rel="stylesheet" href = "CSS3 Transitions and Animations .css" type = "text/css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -13,45 +14,8 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
-div#box1,#box2,#box3 {
-    background: #d13809;
-    border-radius: 6px;
-    cursor: pointer;
-    height: 95px;
-    line-height: 95px;
-    text-align: center;
-    width: 95px;
-    display: inline-block;
-}
+.rect{ width: 100px; height: 50px; background-color: rgb(24, 24, 24);}
 
-#growing {
-  transition: font-size 3s, color 2s;
-}
-
-@keyframes move {
-        0% {margin-left: 0%; background-color: rgba(80,80,200,0);}
-        25% {margin-left: 20%; background-color: rgba(80,80,200,0.25);}
-        50% {margin-left: 40%;background-color: rgba(80,80,200,0.50);}
-        75% {margin-left: 60%;background-color: rgba(80,80,200,0.75);}
-        100%{margin-left: 80%;background-color: rgba(80,80,200,1);}
-    }
-    
-    .div2.animate {
-        float: left;
-        animation-name: move;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-    }
-
-.chocobo {
-  position: relative;
-  cursor: pointer;
-  width: 177px;
-  height: 160px;
-  right: 0;
-  transition: right 5s cubic-bezier(0, 0, 1, 1);
-}
 </style>
 
 </head>
@@ -76,20 +40,18 @@ div#box1,#box2,#box3 {
 </div>
 
 <!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+<div id="header" style="padding:128px 16px" onmouseover="changeBG('header','#008080');" onmouseout="changeBG('header','#d13809');">
+
     <h1 class="w3-margin w3-jumbo">CIT 261</h1>
     <p class="w3-xlarge"> Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</p>
-</header>
+</div>
 
 <!--Navrow-->
 <div class="row">
 
     <div class="col-3 col-s-3 menu">
         <ul>
-            <a href="#link1"><li>createElement</li></a>
-            <a href="#link2"><li>appendChild</li></a>
-            <a href="#link3"><li>insertBefore</li></a>
-            <a href="#link3"><li>removeChild</li></a>
+            <a href="#CSS3"><li>Transitions & Animations</li></a>
         </ul>
     </div>
 
@@ -101,40 +63,63 @@ div#box1,#box2,#box3 {
         <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
             <div class="w3-content">
                 <div class="w3-twothird">
-                    <h1> Trigger transitions with Javascript</h1>
-                    <p>
-                        CSS transitions create a way to control the speed that CSS properties change. 
-                        This allows us to change things over time instead of having changes take place instantly.
-                     </p>
-                    <div class="w3-padding-32 code">
-                        <div id="box1" onmouseover="changeBG('box1','#F0F');" onmouseout="changeBG('box1','#d13809');">Float over</div>
-                        <div id="box2" onmouseover="fadeOut('box2');" onmouseout="fadeIn('box2');">Float over</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-                <div class="w3-content">
-                    <div class="w3-twothird">
-                        <h1> CSS3 Transitions</h1>
-                        <div class="w3-padding-32 code">
-
-                            <button class="animate div2" id="growing animationCat" onclick="moveCat()" type="button">Click me</button>
+                        <section id="CSS3"></section>
+                    <section id="CSS3">
+                    <h1> Trigger Transitions & Animations With Javascript</h1> <br>
+                    <div style=" width: 170px; height: 50px; background-color: rgb(24, 24, 24);">
+                            <h4  style="color: aliceblue; text-align: left;">
+                                JavaScript
+                            </h4>      
                         </div>
+                    <pre class="code">
+                function fadeOut(el) {
+                var elem = document.getElementById(el);
+                elem.style.transition = "opacity 1.0s linear 0s";
+                elem.style.opacity = 0;
+                }
+                            
+                function fadeIn(el) {
+                var elem = document.getElementById(el);
+                elem.style.transition = "opacity 1.0s linear 0s";
+                elem.style.opacity = 1;
+                }
+                    </pre> <br>
+                        <div style=" width: 170px; height: 50px; background-color: rgb(24, 24, 24);">
+                            <h4  style="color: aliceblue; text-align: left;">
+                                Result
+                            </h4>      
+                        </div> 
+                    <div class="code">
+                        <div id="box" onmouseover="fadeOut('box');" onmouseout="fadeIn('box');">Float over</div>
+                    </div> <br>
+                    <br>
+                    <br>
+                    <div class="w3-padding-32 code">
+                    <button id="growing" onclick="ani()"><span>Click me</span></button>
+                </div>
+                <div class="rect" id="something">
+                        <h4 style="color: aliceblue; text-align: left;">
+                            Animation
+                        </h4>      
                     </div>
+                    <br />
+                    <input name="" type="button" value="Move" onclick="ani()" />
+                    </section>
                 </div>
             </div>
-        <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-            <p class="w3-margin w3-xlarge"></p> 
         </div>
-
+        
+              
+            <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+                <p class="w3-margin w3-xlarge"></p> 
+            </div>
 
     </div>
 
 </div>
 
 <div class="footer">
-  <p> CIT 261<br>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</p>
+  <p> CIT 261<br>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</p>
 </div>
 
 <script type="text/javascript" src="fluency_8.js"></script>

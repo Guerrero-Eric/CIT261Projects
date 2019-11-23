@@ -44,58 +44,60 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="row">
     <div class="col-3 col-s-3 menu">
         <ul>
-            <a href="#link1"><li>Object Creation</li></a>
-            <a href="#link2"><li>Inheritance</li></a>
-            <a href="#link3"><li>Properties</li></a>
-            <a href="#link4"><li>Method</li></a>
-            <a href="#link5"><li>Instantiation</li></a>
+            <a href="#object"><li>Object Creation</li></a>
+            <a href="#inheritance"><li>Inheritance</li></a>
+            <a href="#properties"><li>Properties</li></a>
+            <a href="#method"><li>Method</li></a>
+            <a href="#instantiation"><li>Instantiation</li></a>
         </ul>
     </div>
 
 <div class="col-6 col-s-9">
 <!-- First Grid -->
+<section id="object"></section>
     <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
         <div class="w3-content">
           <div class="w3-twothird">
-            <h1>Object</h1>
-            <p> An object, is a reference data type. <br>
-                An object in javascript can represent anything from a single valve such as a name, number, and boolean.</p>
-               <div class="code">
-                 <p>var person = { firstName:"John", lastName:"Doe", age:50, eyeColor:"blue" };</p>
-               </div>
-            <h5 class="w3-padding-32"> Object Creation Function</h5>
-              <p>The Object.create() creates a new object, using an existing object as the prototype of 
-                  the newly created object. </p>
-            <div class="w3-text-grey">
-        
-            </div>
-            <div class="code">
-                <pre>
-                  function animal() {  
-                    this.name = 'Scar'; 
-                  } 
-                  
-                  function
-                  tiger() { 
-                    animal.call(this); 
-                  } 
-                     
-                  tiger.prototype = Object.create(animal.prototype);  
-                  const example = new tiger();
-                </pre>
+              <h1>Object</h1>
+              <p> An object, is a reference data type. <br>
+                  An object in javascript can represent anything from a single valve such as a name, number, and boolean.
+              </p>
+                <div class="code">
+                  <p>var person = { firstName:"John", lastName:"Doe", age:50, eyeColor:"blue" };</p>
+                </div>
+              <h5 class="w3-padding-32"> Object Creation Function</h5>
+                <p>The Object.create() creates a new object, using an existing object as the prototype of 
+                    the newly created object. </p>
+              <div class="w3-text-grey">
+          
               </div>
+              <div class="code">
+                  <pre>
+                    function animal() {  
+                      this.name = 'Scar'; 
+                    } 
+                    
+                    function
+                    tiger() { 
+                      animal.call(this); 
+                    } 
+                      
+                    tiger.prototype = Object.create(animal.prototype);  
+                    const example = new tiger();
+                  </pre>
+              </div>
+            </div>
           </div>
         </div>
-    </div>
       
     <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
         If we compile and run the above program, then it will produce the following result −
-      <div class="w3-margin w3-xlarge" id="object"> </div>
+      <div class="w3-margin w3-xlarge" id="objectCall"> </div>
     </div>
 <!-- Second Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
         <div class="w3-content">
-      
+            <section id="inheritance"></section>
           <div class="w3-twothird">
             <h1>Inheritance</h1>
             <h5 class="w3-padding-32"> JavaScript uses prototype based inheritance.</h5>
@@ -148,6 +150,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
         <div class="w3-content">
           <div class="w3-twothird">
+              <section id="properties"></section>
             <h1>Properties</h1>
             <h5 class="w3-padding-32">
               Properties are the values associated with a JavaScript object.
@@ -171,6 +174,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
             <div class="w3-content">
               <div class="w3-twothird">
+                  <section id="method"></section>
                 <h1>Methods</h1>
                 <h5 class="w3-padding-32">JavaScript methods are actions that can be performed on objects.</h5>
                 <p>You access an object method with the following syntax:</p>
@@ -194,6 +198,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
             <div class="w3-content">
               <div class="w3-twothird">
+                  <section id="instantiation"></section>
                 <h1>Instantiation</h1>
                 <h5 class="w3-padding-32"> Instantiation patterns are different methods to create objects.</h5>
                 <p>source: medium.com</p>

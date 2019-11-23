@@ -1,7 +1,15 @@
 * {
     box-sizing: border-box;
   }
-  
+
+  #header {
+    padding: 60px;
+    text-align: center;
+    background: F0F;
+    color: white;
+    font-size: 30px;
+  }
+
   img {
     width: auto;
     height: auto;
@@ -31,6 +39,7 @@ a{
   background-color: #ddd;
   color: black;
 }
+
 
   .row:after {
     content: "";

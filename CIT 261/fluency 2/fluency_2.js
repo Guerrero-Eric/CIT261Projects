@@ -11,7 +11,7 @@ tiger() {
 tiger.prototype = Object.create(animal.prototype);  
 const example = new tiger(); 
    
-document.getElementById('object').innerHTML = example.name;
+document.getElementById('objectCall').innerHTML = example.name;
 
 var animalA = function() {}; 
 
